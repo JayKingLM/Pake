@@ -210,7 +210,7 @@ jobs:
           }
 
           Write-Host "Running: node dist/cli.js $($args -join ' ')"
-          node dist/cli.js $args
+          node dist/cli.js $args --show-system-tray --start-to-tray --hide-on-close --activation-shortcut "CmdOrControl+Alt+M"
 
           git checkout -- src-tauri/Cargo.lock
 
